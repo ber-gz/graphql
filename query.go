@@ -13,7 +13,7 @@ import (
 func constructQuery(v interface{}, variables map[string]interface{}) string {
 	query := query(v)
 	if len(variables) > 0 {
-		return "query(" + queryArguments(variables) + ")" + query
+		return "subscription(" + queryArguments(variables) + ")" + query
 	}
 	return query
 }
